@@ -1,7 +1,7 @@
 # Jackson Small
 # July 1, 2023
-# one variable statistics calculator
-# inlcudes: Mean, Sum, Sum of x^2, Sample Stdev, Population Stdev,
+# One Variable Statistics Calculator
+# Inlcudes: Mean, Sum, Sum of x^2, Sample Stdev, Population Stdev, n, MinX, Q1, median, Q3, MaxX, SSX
 
 import numpy as np
 
@@ -47,7 +47,7 @@ print("sum of x^2: ", sum_x_squared)
 sample_stdev = np.std(x_val, ddof=1)
 print("Sample Stdev: ", sample_stdev)
 
-# Caluclate Sample Population Deviation
+# Caluclate Population Standard Deviation
 population_stdev = np.std(x_val)
 print("Population Stdev: ", population_stdev)
 
