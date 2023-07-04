@@ -1,7 +1,7 @@
 # Jackson Small
 # July 1, 2023
 # One Variable Statistics Calculator
-# Inlcudes: Mean, Sum, Sum of x^2, Sample Stdev, Population Stdev, n, MinX, Q1, median, Q3, MaxX, SSX
+# Inlcudes: Mean, Sum, Sum of x^2, Sample Stdev, Population Stdev, n, MinX, Q1, median, Q3, MaxX, IQR, Lower and Upper fences, and SSX. 
 
 import numpy as np
 
@@ -74,6 +74,18 @@ print("q3 of x:", q3_x)
 # Calculate Max
 max_x = np.max(x_val)
 print("MaxX: ", max_x)
+
+# Calculate IQR
+iqr_x = (q3_x - q1_x)
+print("IQR: ", iqr_x)
+
+# lower fence
+lower_fence = q1_x - (iqr_x * 1.5)
+print("Lower Fence: ", lower_fence)
+
+# upper fence
+upper_fence = q3_x + (iqr_x * 1.5)
+print("Upper Fence: ", upper_fence)
 
 # Calculate SSX sum(x - x_bar)**2
 ssx_arr = np.sum(((x_val - mean_x)**2))
